@@ -17,29 +17,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers(/* HttpMethod.POST,*/"/","/Резюме","/Тест","/ans","/login").permitAll()
+                .antMatchers(/* HttpMethod.POST,*/"/","/Questions","/askQues","/authPage").permitAll()
                 .antMatchers("/images/**").permitAll()
+                .antMatchers("/About-us.css").permitAll()
+                .antMatchers("/askQues.css").permitAll()
+                .antMatchers("/authPage.css").permitAll()
+                .antMatchers("/nicepage.css").permitAll()
+                .antMatchers("/Questions.css").permitAll()
                 .antMatchers("/adminPage.css").permitAll()
-                .antMatchers("/ansPage.css").permitAll()
-                .antMatchers("/index.css").permitAll()
-                .antMatchers("/css.css").permitAll()
-                .antMatchers("/Post-Template.css").permitAll()
-                .antMatchers("/Тест.css").permitAll()
-                .antMatchers("/Резюме.css").permitAll()
-                .antMatchers("/login.css").permitAll()
 
                 .antMatchers("/jquery.js").permitAll()
-                .antMatchers("/js.js").permitAll()
+                .antMatchers("/nicepage.js").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/authPage")
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll().and().
-                cors().and().
-                csrf().disable()
+                .permitAll()
         ;
     }
     @Bean
@@ -47,8 +43,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User.withDefaultPasswordEncoder()
-                        .username("admin")
-                        .password("admin")
+                        .username("user@gmail.com")
+                        .password("password")
                         .roles("USER")
                         .build();
 

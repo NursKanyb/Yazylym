@@ -6,9 +6,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>adminPage</title>
+    <title>askQues</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="adminPage.css" media="screen">
+    <link rel="stylesheet" href="askQues.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
@@ -23,85 +23,127 @@
         "logo": "images/default-logo.png"
     }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="adminPage">
+    <meta property="og:title" content="askQues">
     <meta property="og:type" content="website">
 </head>
 <body class="u-body">
-<header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-23a5" th:insert="blocks/header::header"></header>
-
-<section class="u-clearfix u-section-1" id="sec-edc7">
+<header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-23a5" th:insert="blocks/header::header">
+</header>
+<section class="u-clearfix u-section-1" id="sec-610b">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <img class="u-image u-image-default u-image-1" src="images/authback.png" alt="" data-image-width="1080"
-             data-image-height="660">
-        <h4 class="u-text u-text-custom-color-2 u-text-default u-text-1"> Добавить профессию</h4>
+        <img class="u-image u-image-1" src="images/Rectangle7.png" data-image-width="1194" data-image-height="599">
         <div class="u-form u-form-1">
-            <form action="#" th:action="@{/adminPage}" method="POST"
-                  class="u-clearfix u-form-custom-backend u-form-spacing-14 u-form-vertical u-inner-form"
+            <form action="#" method="POST"
+                  class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form"
                   source="custom" name="form" style="padding: 10px;" redirect="true">
-                <input type="hidden" id="siteId" name="siteId" value="2464724238">
-                <input type="hidden" id="pageId" name="pageId" value="924413737">
-                <div class="u-form-group u-form-name">
-                    <label for="name-74ab" class="u-label u-label-1">Название:</label>
-                    <input type="text" id="name-74ab" name="name"
-                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white" required="">
-                </div>
-                <div class="u-form-group u-form-select u-form-group-2">
-                    <label for="select-659b" class="u-label u-label-2">Каким вопросам касается?</label>
+                <div class="u-form-group u-form-select u-form-group-1">
+                    <label for="select-c209" class="u-label u-label-1">Вопрос 1</label>
                     <div class="u-form-select-wrapper">
-                        <select id="select-659b" name="select__"
-                                class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
-                                required="required" size="3" multiple="multiple">
-                            <option value="Вопрос 1">Вопрос 1</option>
-                            <option value="Вопрос 2">Вопрос 2</option>
-                            <option value="Вопрос 3">Вопрос 3</option>
-                            <option value="Вопрос 4">Вопрос 4</option>
-                            <option value="Вопрос 5">Вопрос 5</option>
-                            <option value="Вопрос 6">Вопрос 6</option>
-                            <option value="Вопрос 7">Вопрос 7</option>
-                            <option value="Вопрос 8">Вопрос 8</option>
-                            <option value="Вопрос 9">Вопрос 9</option>
-                            <option value="Вопрос 10">Вопрос 10</option>
-                            <option value="Вопрос 11">Вопрос 11</option>
-                            <option value="Вопрос 12">Вопрос 12</option>
-                            <option value="Вопрос 13">Вопрос 13</option>
-                            <option value="Вопрос 14">Вопрос 14</option>
-                            <option value="Вопрос 15">Вопрос 15</option>
+                        <select id="select-c209" name="select" class="u-input u-input-rectangle u-white u-input-1"
+                                required="required">
+                            <option value="ans1">ans1</option>
+                            <option value="ans2">ans2</option>
+                            <option value="ans3">ans3</option>
                         </select>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
                             <path fill="currentColor" d="M4 8L0 4h8z"></path>
                         </svg>
                     </div>
                 </div>
-                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-3">
-                    <input type="checkbox" id="checkbox-89c6" name="checkbox" value="On">
-                    <label for="checkbox-89c6" class="u-label u-label-3">Нужна ли диплом?</label>
+                <div class="u-form-checkbox u-form-group u-form-group-2">
+                    <input type="checkbox" id="checkbox-18d2" name="checkbox" value="On" required="required">
+                    <label for="checkbox-18d2" class="u-label u-label-2"> Вопрос 2</label>
                 </div>
-                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-4">
-                    <input type="checkbox" id="checkbox-6e46" name="checkbox_1" value="On">
-                    <label for="checkbox-6e46" class="u-label u-label-4">Нужна ли опыт работы?</label>
+                <div class="u-form-group u-form-partition-factor-3 u-form-radiobutton u-form-group-3">
+                    <div class="u-form-radio-button-wrapper">
+                        <input type="radio" name="radiobutton" value="Вопрос 3" required="required">
+                        <label class="u-label u-label-3" for="radiobutton">Вопрос 3</label>
+                        <br>
+                        <input type="radio" name="radiobutton" value="Вопрос 4" required="required">
+                        <label class="u-label u-label-4" for="radiobutton">Вопрос 4</label>
+                        <br>
+                    </div>
                 </div>
-                <div class="u-form-group">
-                    <label for="email-74ab" class="u-form-control-hidden u-label u-label-5"></label>
-                    <input type="text" id="email-74ab" name="email"
-                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
-                           required="required" placeholder="Подробнее об этой профессии...">
+                <div class="u-form-group u-form-partition-factor-3 u-form-select u-form-group-4">
+                    <label for="select-d9d9" class="u-label u-label-5">Вопрос 6</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-d9d9" name="select_1" class="u-input u-input-rectangle u-white u-input-2"
+                                required="required">
+                            <option value="ans1">ans1</option>
+                            <option value="ans2">ans2</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                            <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                        </svg>
+                    </div>
                 </div>
-                <div class="u-form-group u-form-partition-factor-2 u-form-group-6">
-                    <label for="text-d03e" class="u-label u-label-6">Курсы</label>
-                    <input type="text" placeholder="" id="text-d03e" name="text"
-                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
-                           required="required">
+                <div class="u-form-group u-form-partition-factor-3 u-form-select u-form-group-5">
+                    <label for="select-fda5" class="u-label u-label-6">Вопрос 7</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-fda5" name="select_2" class="u-input u-input-rectangle u-white u-input-3"
+                                required="required">
+                            <option value="ans1">ans1</option>
+                            <option value="ans2">ans2</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                            <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                        </svg>
+                    </div>
                 </div>
-                <div class="u-form-group u-form-partition-factor-2 u-form-group-7">
-                    <label for="text-31a8" class="u-label u-label-7">Университеты</label>
-                    <input type="text" placeholder="" id="text-31a8" name="text_1"
-                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
-                           required="required">
+                <div class="u-form-group u-form-select u-form-group-6">
+                    <label for="select-ded9" class="u-form-control-hidden u-label u-label-7"></label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-ded9" name="select_3" class="u-input u-input-rectangle u-white u-input-4"
+                                size="3" multiple="multiple" required="required">
+                            <option value="Вопрос 8">Вопрос 8</option>
+                            <option value="Вопрос 9">Вопрос 9</option>
+                            <option value="Вопрос 10">Вопрос 10</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                            <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                        </svg>
+                    </div>
                 </div>
-                <div class="u-align-center u-form-group u-form-submit">
+                <div class="u-form-group u-form-partition-factor-2 u-form-radiobutton u-form-group-7">
+                    <div class="u-form-radio-button-wrapper">
+                        <input type="radio" name="radiobutton_1" value="Вопрос 11">
+                        <label class="u-label u-label-8" for="radiobutton-1">Вопрос 11</label>
+                        <br>
+                        <input type="radio" name="radiobutton_1" value="Вопрос 12">
+                        <label class="u-label u-label-9" for="radiobutton-1">Вопрос 12</label>
+                        <br>
+                    </div>
+                </div>
+                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-8">
+                    <input type="checkbox" id="checkbox-7fc7" name="checkbox_1" value="On">
+                    <label for="checkbox-7fc7" class="u-label u-label-10">Вопрос 13</label>
+                </div>
+                <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-9">
+                    <label for="select-48f1" class="u-label u-label-11">Вопрос 15</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-48f1" name="select_4" class="u-input u-input-rectangle u-white u-input-5">
+                            <option value="ans1">ans1</option>
+                            <option value="ans2">ans2</option>
+                            <option value="ans3">ans3</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                            <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-10">
+                    <input type="checkbox" id="checkbox-b14c" name="checkbox_2" value="On">
+                    <label for="checkbox-b14c" class="u-label u-label-12">Вопрос 14</label>
+                </div>
+                <div class="u-form-group u-form-message">
+                    <label for="message-3e6e" class="u-label u-label-13">Как наша платформа?</label>
+                    <textarea rows="3" cols="50" id="message-3e6e" name="message"
+                              class="u-input u-input-rectangle u-white u-input-6"></textarea>
+                </div>
+                <div class="u-align-right u-form-group u-form-submit">
                     <a href="#"
-                       class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-radius-50 u-btn-1">Отправить</a>
-                    <input type="submit" value="submit" class="u-form-control-hidden">
+                       class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-radius-32 u-btn-1"></a>
+                    <input type="submit" value="next>>" class="u-form-control-hidden">
                 </div>
                 <div class="u-form-send-message u-form-send-success"> Спасибо! Ваше сообщение отправлено.</div>
                 <div class="u-form-send-error u-form-send-message"> Отправка не удалась. Пожалуйста, исправьте ошибки и
@@ -110,9 +152,11 @@
                 <input type="hidden" value="" name="recaptchaResponse">
             </form>
         </div>
+        <a href="https://nicepage.com/c/technology-website-templates"
+           class="u-border-none u-btn u-btn-round u-button-style u-custom-color-2 u-radius-50 u-btn-2"> &lt;&lt;
+            prev</a>
     </div>
 </section>
-
 
 <footer class="u-clearfix u-custom-color-1 u-footer" id="sec-8b8f">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -178,6 +222,7 @@ c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
         <h3 class="u-text u-text-custom-color-2 u-text-default u-text-1"> To help you find yourself</h3>
     </div>
 </footer>
+
 
 </body>
 </html>

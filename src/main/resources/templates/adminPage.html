@@ -7,97 +7,177 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>adminPage</title>
-    <link rel="stylesheet" href="css.css" media="screen">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="adminPage.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="js.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.23.2, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
 
     <script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "Organization",
-        "name": ""
+        "name": "",
+        "logo": "images/default-logo.png"
     }</script>
-    <meta name="theme-color" content="#291569">
+    <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="adminPage">
     <meta property="og:type" content="website">
 </head>
-<body class="u-body u-xl-mode">
-<header class="u-clearfix u-header u-header" id="sec-3d90" th:insert="blocks/header::header">
-</header>
-<section class="u-clearfix u-section-1" id="sec-f90d">
+<body class="u-body">
+<header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-23a5" th:insert="blocks/header::header"></header>
+
+<section class="u-clearfix u-section-1" id="sec-edc7">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <h4 class="u-text u-text-default u-text-palette-1-base u-text-1">Добавить профессию</h4>
+        <img class="u-image u-image-default u-image-1" src="images/authback.png" alt="" data-image-width="1080"
+             data-image-height="660">
+        <h4 class="u-text u-text-custom-color-2 u-text-default u-text-1"> Добавить профессию</h4>
         <div class="u-form u-form-1">
-            <form action="#" method="POST" class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form"
-                  style="padding: 0px;" source="email" name="form" redirect="true">
-                <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-1">
-                    <label for="text-50a9" class="u-label">Название</label>
-                    <input type="text" id="text-50a9" name="name"
-                           class="u-border-2 u-border-white u-grey-10 u-input u-input-rectangle u-radius-14 u-input-1">
+            <form action="#" th:action="@{/adminPage}" method="POST"
+                  class="u-clearfix u-form-custom-backend u-form-spacing-14 u-form-vertical u-inner-form"
+                  source="custom" name="form" style="padding: 10px;" redirect="true">
+                <input type="hidden" id="siteId" name="siteId" value="2464724238">
+                <input type="hidden" id="pageId" name="pageId" value="924413737">
+                <div class="u-form-group u-form-name">
+                    <label for="name-74ab" class="u-label u-label-1">Название:</label>
+                    <input type="text" id="name-74ab" name="name"
+                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white" required="">
                 </div>
-                <div class="u-form-group u-form-partition-factor-2 u-label-top u-form-group-2">
-                    <label for="text-b382" class="u-label">Вопросы? (split: "-")</label>
-                    <input type="text" placeholder="" id="text-b382" name="questions"
-                           class="u-border-2 u-border-white u-grey-10 u-input u-input-rectangle u-radius-14 u-input-2">
+                <div class="u-form-group u-form-select u-form-group-2">
+                    <label for="select-659b" class="u-label u-label-2">Каким вопросам касается?</label>
+                    <div class="u-form-select-wrapper">
+                        <select id="select-659b" name="select__"
+                                class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
+                                required="required" size="3" multiple="multiple">
+                            <option value="Вопрос 1">Вопрос 1</option>
+                            <option value="Вопрос 2">Вопрос 2</option>
+                            <option value="Вопрос 3">Вопрос 3</option>
+                            <option value="Вопрос 4">Вопрос 4</option>
+                            <option value="Вопрос 5">Вопрос 5</option>
+                            <option value="Вопрос 6">Вопрос 6</option>
+                            <option value="Вопрос 7">Вопрос 7</option>
+                            <option value="Вопрос 8">Вопрос 8</option>
+                            <option value="Вопрос 9">Вопрос 9</option>
+                            <option value="Вопрос 10">Вопрос 10</option>
+                            <option value="Вопрос 11">Вопрос 11</option>
+                            <option value="Вопрос 12">Вопрос 12</option>
+                            <option value="Вопрос 13">Вопрос 13</option>
+                            <option value="Вопрос 14">Вопрос 14</option>
+                            <option value="Вопрос 15">Вопрос 15</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                            <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                        </svg>
+                    </div>
                 </div>
-                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-label-top u-form-group-3">
-                    <input type="checkbox" id="checkbox-9d3e" name="diplom" value="On">
-                    <label for="checkbox-9d3e" class="u-label">Нужна ли диплом?</label>
+                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-3">
+                    <input type="checkbox" id="checkbox-89c6" name="checkbox" value="On">
+                    <label for="checkbox-89c6" class="u-label u-label-3">Нужна ли диплом?</label>
                 </div>
-                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-label-top u-form-group-4">
-                    <input type="checkbox" id="checkbox-0b7f" name="skill" value="On">
-                    <label for="checkbox-0b7f" class="u-label">Нужна ли опыт работы?</label>
+                <div class="u-form-checkbox u-form-group u-form-partition-factor-2 u-form-group-4">
+                    <input type="checkbox" id="checkbox-6e46" name="checkbox_1" value="On">
+                    <label for="checkbox-6e46" class="u-label u-label-4">Нужна ли опыт работы?</label>
                 </div>
-                <div class="u-form-group u-form-message u-label-top u-form-group-5">
-                    <label for="message-94d2" class="u-label">More about this job</label>
-                    <textarea rows="4" cols="50" id="message-94d2" name="moreInfo"
-                              class="u-border-2 u-border-white u-grey-10 u-input u-input-rectangle u-radius-14 u-input-3"
-                              required=""></textarea>
+                <div class="u-form-group">
+                    <label for="email-74ab" class="u-form-control-hidden u-label u-label-5"></label>
+                    <input type="text" id="email-74ab" name="email"
+                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
+                           required="required" placeholder="Подробнее об этой профессии...">
                 </div>
-                <div class="u-align-left u-form-group u-form-submit u-label-top">
+                <div class="u-form-group u-form-partition-factor-2 u-form-group-6">
+                    <label for="text-d03e" class="u-label u-label-6">Курсы</label>
+                    <input type="text" placeholder="" id="text-d03e" name="text"
+                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
+                           required="required">
+                </div>
+                <div class="u-form-group u-form-partition-factor-2 u-form-group-7">
+                    <label for="text-31a8" class="u-label u-label-7">Университеты</label>
+                    <input type="text" placeholder="" id="text-31a8" name="text_1"
+                           class="u-border-1 u-border-white u-input u-input-rectangle u-radius-6 u-white"
+                           required="required">
+                </div>
+                <div class="u-align-center u-form-group u-form-submit">
                     <a href="#"
-                       class="u-active-black u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-3-base u-radius-14 u-text-body-alt-color u-btn-1">Safe</a>
-                    <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true">
+                       class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-custom-color-2 u-radius-50 u-btn-1">Отправить</a>
+                    <input type="submit" value="submit" class="u-form-control-hidden">
                 </div>
-                <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has
-                    been sent.
+                <div class="u-form-send-message u-form-send-success"> Спасибо! Ваше сообщение отправлено.</div>
+                <div class="u-form-send-error u-form-send-message"> Отправка не удалась. Пожалуйста, исправьте ошибки и
+                    попробуйте еще раз.
                 </div>
-                <div class="u-form-send-error u-form-send-success" wfd-invisible="true"> Saved!
-                </div>
-                <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
+                <input type="hidden" value="" name="recaptchaResponse">
             </form>
-        </div>
-        <h5 class="u-text u-text-default u-text-2">Наши работы:</h5>
-        <div class="u-expanded-width u-table u-table-responsive u-table-1">
-            <table class="u-table-entity">
-                <colgroup>
-                    <col width="33.3%">
-                    <col width="33.3%">
-                    <col width="33.4%">
-                </colgroup>
-                <tbody class="u-table-body">
-                <tr style="height: 71px;">
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-table-cell-1">Prof. name</td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
-                        <a href="/"
-                           class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">delete</a>
-                    </td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell">
-                        <a class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-3" href="#">change</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </section>
 
 
-<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-18cf">
-    <div class="u-align-left u-clearfix u-sheet u-sheet-1"></div>
+<footer class="u-clearfix u-custom-color-1 u-footer" id="sec-8b8f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="112" data-image-height="50">
+            <img src="images/FindYourself.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <div class="u-social-icons u-spacing-10 u-social-icons-1">
+            <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name"><span
+                    class="u-icon u-social-icon u-social-instagram u-text-black u-icon-1"><svg class="u-svg-link"
+                                                                                               preserveAspectRatio="xMidYMin slice"
+                                                                                               viewBox="0 0 112 112"
+                                                                                               style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ae78"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-ae78"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path
+                    fill="#FFFFFF"
+                    d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path
+                    fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
+            </a>
+            <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span
+                    class="u-icon u-social-facebook u-social-icon u-text-black u-icon-2"><svg class="u-svg-link"
+                                                                                              preserveAspectRatio="xMidYMin slice"
+                                                                                              viewBox="0 0 112 112"
+                                                                                              style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-4449"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-4449"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
+            </a>
+            <a class="u-social-url" target="_blank" data-type="Telegram" title="Telegram" href=""><span
+                    class="u-icon u-social-icon u-social-telegram u-text-black u-icon-3"><svg class="u-svg-link"
+                                                                                              preserveAspectRatio="xMidYMin slice"
+                                                                                              viewBox="0 0 112 112"
+                                                                                              style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9af6"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-9af6"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    fill="#FFFFFF" d="M18.4,53.2l64.7-24.9c3-1.1,5.6,0.7,4.7,5.3l0,0l-11,51.8c-0.8,3.7-3,4.6-6.1,2.8L53.9,75.8l-8.1,7.8
+	c-0.9,0.9-1.7,1.6-3.4,1.6l1.2-17l31.1-28c1.4-1.2-0.3-1.9-2.1-0.7L34.2,63.7l-16.6-5.2C14,57.4,14,54.9,18.4,53.2L18.4,53.2z"></path></svg></span>
+            </a>
+            <a class="u-social-url" target="_blank" data-type="Email" title="Email" href=""><span
+                    class="u-icon u-social-email u-social-icon u-text-black u-icon-4"><svg class="u-svg-link"
+                                                                                           preserveAspectRatio="xMidYMin slice"
+                                                                                           viewBox="0 0 112 112"
+                                                                                           style=""><use
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f9c8"></use></svg><svg
+                    class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-f9c8"><circle fill="currentColor"
+                                                                                                  cx="56.1" cy="56.1"
+                                                                                                  r="55"></circle><path
+                    id="path3864" fill="#FFFFFF" d="M27.2,28h57.6c4,0,7.2,3.2,7.2,7.2l0,0v42.7c0,3.9-3.2,7.2-7.2,7.2l0,0H27.2
+	c-4,0-7.2-3.2-7.2-7.2V35.2C20,31.1,23.2,28,27.2,28 M56,52.9l28.8-17.8H27.2L56,52.9 M27.2,77.7h57.6V43.5L56,61.3L27.2,43.5V77.7z
+	"></path></svg></span>
+            </a>
+        </div>
+        <h3 class="u-text u-text-custom-color-2 u-text-default u-text-1"> To help you find yourself</h3>
+    </div>
 </footer>
+
 </body>
 </html>
